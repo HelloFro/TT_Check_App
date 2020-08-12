@@ -13,9 +13,11 @@ class Piece extends StatelessWidget {
         child: piece, 
         feedback: piece,
         childWhenDragging: Placeholder(),
-        // TODO: Turn Logic
+        // TODO: implement Turn Logic
         onDragCompleted: null,
       ),
+      width: 40, 
+      height: 40,
     );
   }
 }
