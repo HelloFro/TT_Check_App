@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+
 class Piece extends StatelessWidget {
-  const Piece({Key key, this.piece, this.name}) : super(key: key);
+  const Piece({Key key, this.piece, this.name, this.player}) : super(key: key);
 
   final String name;
   final Widget piece;
+  final Player player;
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +15,12 @@ class Piece extends StatelessWidget {
       child: Draggable(
         child: piece, 
         feedback: piece,
-        childWhenDragging: Placeholder(),
+        childWhenDragging: player == Player.white ? Placeholder(color: Colors.white): Placeholder(color: Colors.black),
         // TODO: implement Turn Logic
         onDragCompleted: null,
       ),
-      width: 40, 
-      height: 40,
+      width: kPieceSize, 
+      height: kPieceSize,
     );
   }
 }
