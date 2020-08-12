@@ -1,0 +1,1 @@
+const kPieceSize = 40.0;
