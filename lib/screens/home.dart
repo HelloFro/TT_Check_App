@@ -5,6 +5,7 @@ import 'package:tt_check/constants.dart';
 import 'package:tt_check/game/board.dart';
 import 'package:tt_check/game/game_state.dart';
 import 'package:tt_check/game/piece_bench.dart';
+import 'package:tt_check/screens/settings.dart';
 
 class Home extends StatelessWidget {
   const Home({Key key}) : super(key: key);
@@ -28,6 +29,7 @@ class Home extends StatelessWidget {
             PieceBench(player: Player.white),
           ]
       ),
+      drawer: Settings(),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.replay),
         tooltip: "Restart",
