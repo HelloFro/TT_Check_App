@@ -21,6 +21,7 @@ class BoardSpace extends StatelessWidget {
 
     return Consumer((context, watch) {
       Player turn = watch(turnStateProvider).state;
+      int turnCount = watch(turnCounterStateProvider).state;
 
       return Container(
         decoration: BoxDecoration(
@@ -31,7 +32,7 @@ class BoardSpace extends StatelessWidget {
             return accept ?? Container(width: kPieceSize, height: kPieceSize);
           },
           // TODO: check game state player turn to decide acceptance
-          onWillAccept: (piece) => (!hasPiece && piece.player == turn) || (hasPiece && piece.player == turn && piece.location == Location.board),
+          onWillAccept: (piece) => willAccept(piece, hasPiece, turn, turnCount),
           onAccept: (piece) {
             piece.changeLocation = Location.board;
             accept = Piece(pieceData: piece);
@@ -85,5 +86,25 @@ class BoardSpace extends StatelessWidget {
         break;
     }
     return determinedBorder;
+  }
+
+  bool willAccept(PieceData p, bool hasPiece, Player turn, int turnCount){
+    switch (p.name) {
+      case "wPawn":
+      case "bPawn":
+        return !hasPiece && p.player == turn;
+      case "wRook":
+        return !hasPiece && p.player == turn && turnCount > 2;
+      case "bRook":
+        return !hasPiece && p.player == turn && turnCount > 3;
+      case "wBishop":
+        return !hasPiece && p.player == turn && turnCount > 4;
+      case "bBishop":
+        return !hasPiece && p.player == turn && turnCount > 5;
+      case "wKing":
+        return !hasPiece && p.player == turn && turnCount > 6;
+      case "bKing":
+        return !hasPiece && p.player == turn && turnCount > 7;
+    }
   }
 }
