@@ -1,16 +1,27 @@
-# tt_check
+# T-T Check App
 
-A new Flutter project.
+CST407 - Mobile App Developement in Android
 
-## Getting Started
+Developer: Fro Warner
 
-This project is a starting point for a Flutter application.
+## Overview
 
-A few resources to get you started if this is your first Flutter project:
+App that implements Tic-Tac-Chess, but with a 3x3 grid and different rules.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Features
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Animated Widgets (2pt)
+- Shared Preferences (1pt)
+- Fragment (2pt)
+- Async Tasks (1pt)
+- Menu Items (1pt)
+- List View (1pt)
+- Grid View
+
+## Notes
+
+### Omitted Proposal Points
+
+- External Api (2pt)
+- Firebase (2pt)
+- > 3 Activities (1pt)
