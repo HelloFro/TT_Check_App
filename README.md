@@ -24,4 +24,4 @@ App that implements Tic-Tac-Chess, but with a 3x3 grid and different rules.
 
 - External Api (2pt)
 - Firebase (2pt)
-- > 3 Activities (1pt)
+- \> 3 Activities (1pt)
