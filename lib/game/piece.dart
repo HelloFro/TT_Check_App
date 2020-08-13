@@ -23,9 +23,9 @@ class Piece extends StatelessWidget {
         onDragCompleted: () { 
           turnStateProvider.read(context).state = turnStateProvider.read(context).state == Player.black ? Player.white: Player.black;
           turnCounterStateProvider.read(context).state++;
-          print("It is now " + turnStateProvider.read(context).state.toString() + "'s turn.");
+          // print("It is now " + turnStateProvider.read(context).state.toString() + "'s turn.");
         },
-        onDragStarted: () => print("onDragStarted Player Turn: " + turnStateProvider.read(context).state.toString()),
+        // onDragStarted: () => print("onDragStarted Player Turn: " + turnStateProvider.read(context).state.toString()),
       ),
       width: kPieceSize, 
       height: kPieceSize,
