@@ -1,3 +1,3 @@
-const kPieceSize = 90.0;
+const kPieceSize = 75.0;
 
 enum Player { black, white }
